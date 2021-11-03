@@ -15,11 +15,11 @@ $server->encode_utf8 = true;
 $server->configureWSDL('testws', 'urn:testws');
 
 //registrando um método
-$server->register('processar_nome',array('nome' => 'xsd:string', 'sobrenome' => 'xsd:string'),array('nomecompleto' => 'xsd:string'),'xsd:testws');
+$server->register('createToken',array('usuarioWS' => 'xsd:string', 'senhaWS' => 'xsd:string'),array('token' => 'xsd:string'),'xsd:testws');
 
 
-function processar_nome($nome,$sobrenome){
-    return $nome. " " . $sobrenome;
+function createToken($usuarioWS,$senhaWS){
+    return '4B5FFD08-3E85-E811-A2D2-005056A48F36';
 }
 
 
